@@ -1,5 +1,5 @@
 /*!
-Theme Name: Kadence Child
+Theme Name: Proto Campaign
 Theme URI: https://www.kadencewp.com/kadence-theme/
 Template: kadence
 Author: Kadence WP
@@ -10,6 +10,49 @@ License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: kadence-child
 */
+.proto-content-wrap {
+  display: block;
+}
+.proto-content-wrap H3 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.proto-content-wrap H5 {
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 17px;
+}
+.proto-content-wrap hr {
+  width: 80%;
+  margin: 15px auto 15px auto;
+  border-bottom: 1px solid var(--global-palette7);
+  height: 2px;
+}
+.proto-content-wrap .proto-tax-pill {
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  color: #a0a0a0;
+  padding: 5px 8px 5px 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: small;
+  line-height: 1.2;
+  border-radius: 5px;
+  border: 1px solid #a0a0a0;
+  transition: 0.5s;
+}
+.proto-content-wrap .proto-tax-pill:hover {
+  color: var(--global-palette3);
+  border-color: var(--global-palette3);
+  cursor: pointer;
+}
+.proto-content-wrap .proto-posted-on {
+  color: var(--global-palette6);
+  display: inline-block;
+  font-size: 80%;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
 
-/* Theme customization starts here
--------------------------------------------------------------- */
+/*# sourceMappingURL=style.css.map */
