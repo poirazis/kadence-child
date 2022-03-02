@@ -54,67 +54,28 @@ Text Domain: kadence-child
   font-weight: bolder;
   margin-bottom: 20px;
 }
-.proto-content-wrap .proto-thumb-container {
-  display: block;
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-.proto-content-wrap .proto-thumb {
-  width: 100%;
-  height: 100%;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: grayscale(100);
-  transition: all 0.6s;
-  padding: 10px;
-}
-.proto-content-wrap .proto-thumb::after {
-  content: "";
-  display: block;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-  border: 1px solid white;
-  z-index: 2;
-  transition: all 0.6s;
-}
-.proto-content-wrap .proto-thumb:hover {
-  filter: grayscale(0);
-  transform: scale(1.1);
-}
-.proto-content-wrap .proto-thumb:hover::after {
-  transform: scale(0.9);
-}
 
-.proto-content-wrap-horizontal {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 30px;
-  column-gap: 15px;
-  justify-content: space-evenly;
-}
-.proto-content-wrap-horizontal a {
-  text-decoration: none;
-}
-.proto-content-wrap-horizontal .proto-flex-item {
+.proto-team-member-card {
+  display: block;
   text-align: center;
   overflow: wrap;
-  max-width: 210px;
+  max-width: 200px;
 }
-.proto-content-wrap-horizontal .proto-flex-item h5 {
-  margin: 0px 0px 0px 0px;
+.proto-team-member-card h5 {
+  margin: 0px 0px 0px 0px !important;
   font-size: smaller;
   font-weight: bold;
 }
-.proto-content-wrap-horizontal .proto-thumb-container {
+.proto-team-member-card p {
+  margin: 0px;
+  padding: 0px 0px 0px 0px;
+  font-size: smaller;
+  color: var(--global-palette6);
+}
+.proto-team-member-card a {
+  text-decoration: none;
+}
+.proto-team-member-card .proto-thumb-container {
   display: block;
   overflow: hidden;
   width: 200px;
@@ -122,7 +83,10 @@ Text Domain: kadence-child
   margin-bottom: 10px;
   border-radius: 5px;
 }
-.proto-content-wrap-horizontal .proto-thumb {
+.proto-team-member-card .proto-thumb-container:hover {
+  box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.07), 0.8px 0.8px 5.3px rgba(0, 0, 0, 0.05), 2.7px 2.7px 10px rgba(0, 0, 0, 0.042), 6.4px 6.4px 17.9px rgba(0, 0, 0, 0.035), 13.6px 13.6px 33.4px rgba(0, 0, 0, 0.028), 32px 32px 80px rgba(0, 0, 0, 0.02);
+}
+.proto-team-member-card .proto-thumb-container .proto-thumb {
   width: 100%;
   height: 100%;
   background-position: center center;
@@ -132,7 +96,7 @@ Text Domain: kadence-child
   transition: all 0.6s;
   padding: 10px;
 }
-.proto-content-wrap-horizontal .proto-thumb::after {
+.proto-team-member-card .proto-thumb-container .proto-thumb::after {
   content: "";
   display: block;
   position: relative;
@@ -145,12 +109,154 @@ Text Domain: kadence-child
   z-index: 2;
   transition: all 0.6s;
 }
-.proto-content-wrap-horizontal .proto-thumb:hover {
+.proto-team-member-card .proto-thumb-container .proto-thumb:hover {
   filter: grayscale(0);
   transform: scale(1.1);
 }
-.proto-content-wrap-horizontal .proto-thumb:hover::after {
+.proto-team-member-card .proto-thumb-container .proto-thumb:hover::after {
   transform: scale(0.9);
+}
+
+.proto-content-wrap-horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 15px;
+  justify-content: space-evenly;
+}
+
+.proto-polsector-archive-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 30px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.proto-ppcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  position: relative;
+  border: 1px solid #cccccc;
+  min-width: 300px;
+  width: 350px;
+  height: 400px;
+  border-radius: 5px;
+  padding: 25px;
+  transition: box-shadow 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+.proto-ppcard hr.proto-hr {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--global-palette1);
+  opacity: 0.9;
+  margin: 10px 0 10px 0;
+}
+.proto-ppcard:hover {
+  box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.07), 0.8px 0.8px 5.3px rgba(0, 0, 0, 0.05), 2.7px 2.7px 10px rgba(0, 0, 0, 0.042), 6.4px 6.4px 17.9px rgba(0, 0, 0, 0.035);
+}
+.proto-ppcard .pp-tax {
+  display: block;
+  line-height: 1.2;
+  font-size: 1rem;
+  padding: 5px 10px 5px 10px;
+  position: relative;
+  color: var(--global-palette5);
+  margin-left: -25px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  color: white;
+  font-weight: 500;
+  background-color: var(--global-palette1);
+  z-index: 10;
+  width: fit-content;
+}
+.proto-ppcard .pp-title {
+  display: block;
+  position: relative;
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--global-palette5);
+  z-index: 10;
+}
+.proto-ppcard .pp-excerpt {
+  display: block;
+  flex: 1 1 auto;
+  position: relative;
+  color: var(--global-palette5);
+}
+.proto-ppcard .pp-footer {
+  display: block;
+  font-weight: bold;
+  font-size: small;
+  text-align: right;
+}
+
+.contrib-header {
+  text-align: center;
+  font-variant-caps: all-petite-caps;
+}
+
+.polsector-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  width: 100%;
+}
+
+.polsector-card {
+  display: block;
+  position: relative;
+  border: 1px solid navy;
+  width: 350px;
+  height: 134px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+.polsector-card:hover {
+  box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.07), 0.8px 0.8px 5.3px rgba(0, 0, 0, 0.05), 2.7px 2.7px 10px rgba(0, 0, 0, 0.042), 6.4px 6.4px 17.9px rgba(0, 0, 0, 0.035);
+}
+.polsector-card:hover .count {
+  color: darkgray;
+}
+.polsector-card .title {
+  display: block;
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+}
+.polsector-card .count {
+  border: 1px solid black;
+  text-align: right;
+  padding-right: 20px;
+  color: #F0F0F0;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 60pt;
+  z-index: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

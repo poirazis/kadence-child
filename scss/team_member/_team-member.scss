@@ -48,52 +48,87 @@
         font-weight: bolder;
         margin-bottom: 20px;
     }
-
-    .proto-thumb-container {
-        display: block;
-        overflow: hidden;
-        width: 200px;
-        height: 200px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-    }
-
-    .proto-thumb {
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        filter: grayscale(100);
-        transition: all .6s;
-        padding: 10px;
-
-        &::after {
-            content: "";
-            display: block;
-            position: relative;
-            top: 0px;
-            left: 0px;
-            border-radius: 5px;
-            width: 100%;
-            height: 100%;
-            border: 1px solid white;
-            z-index: 2;
-            transition:  all .6s;
-        }
-
-        &:hover {
-            filter:grayscale(0);
-            transform: scale(1.1);
-
-            &::after {
-                transform: scale(0.9);
-            }
-        }
-
-    }
 }
 
+.proto-team-member-card {
+        display: block;
+        text-align: center;
+        overflow: wrap;
+        max-width: 200px;;
+
+        h5 {
+            margin: 0px 0px 0px 0px !important;
+            font-size: smaller;
+            font-weight: bold;
+        }
+    
+        p {
+            margin: 0px;;
+            padding: 0px 0px 0px 0px;
+            font-size: smaller;;
+            color: var(--global-palette6);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .proto-thumb-container {
+            display: block;
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+    
+            &:hover {
+                box-shadow:
+                    0px 0px 2.2px rgba(0, 0, 0, 0.07),
+                    0.8px 0.8px 5.3px rgba(0, 0, 0, 0.05),
+                    2.7px 2.7px 10px rgba(0, 0, 0, 0.042),
+                    6.4px 6.4px 17.9px rgba(0, 0, 0, 0.035),
+                    13.6px 13.6px 33.4px rgba(0, 0, 0, 0.028),
+                    32px 32px 80px rgba(0, 0, 0, 0.02)
+                    ;
+            }
+
+            .proto-thumb {
+                width: 100%;
+                height: 100%;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                filter: grayscale(100);
+                transition: all .6s;
+                padding: 10px;
+        
+                &::after {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    top: 0px;
+                    left: 0px;
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid var(--global-palette7);
+                    z-index: 2;
+                    transition:  all .6s;
+                }
+        
+                &:hover {
+                    filter:grayscale(0);
+                    transform: scale(1.1);
+                    
+        
+                    &::after {
+                        transform: scale(0.9);
+                    }
+                }
+        
+            }
+        }
+    }
 
 .proto-content-wrap-horizontal {
     display: flex;
@@ -102,64 +137,4 @@
     row-gap: 30px;
     column-gap: 15px;
     justify-content: space-evenly;
-
-    a {
-        text-decoration: none;
-    }
-
-    .proto-flex-item {
-        text-align: center;
-        overflow: wrap;
-        max-width: 210px;;
-
-        h5 {
-            margin: 0px 0px 0px 0px;
-            font-size: smaller;
-            font-weight: bold;
-        }
-    }
-
-    .proto-thumb-container {
-        display: block;
-        overflow: hidden;
-        width: 200px;
-        height: 200px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-    }
-
-    .proto-thumb {
-        width: 100%;
-        height: 100%;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        filter: grayscale(100);
-        transition: all .6s;
-        padding: 10px;
-
-        &::after {
-            content: "";
-            display: block;
-            position: relative;
-            top: 0px;
-            left: 0px;
-            border-radius: 5px;
-            width: 100%;
-            height: 100%;
-            border: 1px solid var(--global-palette7);
-            z-index: 2;
-            transition:  all .6s;
-        }
-
-        &:hover {
-            filter:grayscale(0);
-            transform: scale(1.1);
-
-            &::after {
-                transform: scale(0.9);
-            }
-        }
-
-    }
 }

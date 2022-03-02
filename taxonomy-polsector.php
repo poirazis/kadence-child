@@ -27,23 +27,59 @@ do_action( 'kadence_hero_header' );
 			if ( kadence()->show_in_content_title() ) {
 				get_template_part( 'template-parts/content/archive_header' );
 			}
+
+
+
 			if ( have_posts() ) {
 				?>
-				<div id="archive-container" class="<?php echo esc_attr( implode( ' ', get_archive_container_classes() ) ); ?>">
+				<div id="archive-container" class="proto-polsector-archive-container">
 					<?php
 					while ( have_posts() ) {
 						the_post();
 
-						get_template_part( 'template-parts/content/entry', get_post_type() );
+						the_policy_proposal_card(get_the_ID());
 					}
 					?>
-                    <?php echo '<H1> Taxonomy Hooked! </h1>'; ?>
 				</div>
 				<?php
 				get_template_part( 'template-parts/content/pagination' );
 			} else {
 				get_template_part( 'template-parts/content/error' );
 			}
+			
+			?>
+
+			<div class="contrib-header">
+				<hr class="header">
+				<span> Coordinators </span>
+				<hr class="header">
+			</div>
+
+			<?php
+
+			
+
+			$mypods = pods();
+
+			$coordinators = $mypods->field('coordinators');
+			$accent_color = $mypods->field('accent_color');
+
+			if (!empty($coordinators))
+			{
+				?>
+				<div class="proto-content-wrap-horizontal">
+
+				<?php
+				foreach ($coordinators as $coordinator)
+				{
+					the_team_member_card($coordinator['ID']);
+				}
+				?>
+				</div>
+				<?php
+
+			}
+
 			/**
 			 * Hook for anything after main content
 			 */

@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: kadence-child
 */
 
-@import './team_member/team-member';
 @import './base/base';
-
-
+@import './team_member/team-member';
+@import './policy_proposal/policy_proposal';
+@import './policy_sector/policy_sector';
