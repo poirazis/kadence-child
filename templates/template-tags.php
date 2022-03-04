@@ -29,7 +29,7 @@ function the_team_member_card (int $member_id) {
     }
 }
 
-function the_policy_proposal_card (int $pp_id) 
+function the_policy_proposal_card (int $pp_id, bool $show_tags = true) 
 {
     $mypods = pods('policy_proposal', $pp_id);
     if ($mypods)
@@ -38,14 +38,18 @@ function the_policy_proposal_card (int $pp_id)
         $dat = date_create_from_format('Y-m-d H:s', $mypods->display('post_date') );
         $pol_sector = $mypods->display('polsector');
 
+        echo '<a class="no-underline" href="' . $mypods->display('permalink') .'" >';
         echo '<div class="proto-ppcard">';
-            echo '<div class="pp-tax">' . $pol_sector . '</div>';
+            if ($show_tags) {
+                echo '<div class="pp-tax">' . $pol_sector . '</div>';
+            }
             echo '<div class="pp-title">' . $mypods->display('title') .'</div>';
-            echo '<HR class="proto-hr"></HR>';
-            echo '<div class="pp-excerpt">' . $mypods->display('excerpt') . '</div>';
+/*             echo '<HR class="proto-hr"></HR>';
+ */            echo '<div class="pp-excerpt">' . $mypods->display('excerpt') . '</div>';
             echo '<HR class="proto-hr"></HR>';
             echo '<div class="pp-footer">' . date_format($dat, 'F, j, Y') . '</div>';
         echo '</div>';
+        echo '</a>';
 
     }
 }
@@ -73,10 +77,14 @@ function pc_show_taxonomy ( string $taxname )
 function the_policy_sector_card (Object $term) {
     ?>
 
+        <a class="no-underline" href=" <?php echo get_term_link($term); ?> ">
         <div class="polsector-card"> 
             <div class="title"> <?php echo $term->name; ?> </div>
-            <div class="count"> <?php echo $term->term_id; ?> </div>
+            <div class="count"> <?php echo count_posts_in_term($term->taxonomy, $term->slug, 'policy_proposal'); ?> 
+                <div class="small-caps"> ΠΡΟΤΑΣΕΙΣ</div>
+            </div>
         </div>
+        </a>
 
     <?php
 }

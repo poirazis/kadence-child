@@ -37,7 +37,7 @@ do_action( 'kadence_hero_header' );
 					while ( have_posts() ) {
 						the_post();
 
-						the_policy_proposal_card(get_the_ID());
+						the_policy_proposal_card(get_the_ID(), false);
 					}
 					?>
 				</div>
